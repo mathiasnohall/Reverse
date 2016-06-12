@@ -1,8 +1,7 @@
-﻿using Reverse.Api;
-using System.Net.Http.Headers;
+﻿using System.Net.Http.Headers;
 using System.Web.Http;
 
-namespace Svea.Api
+namespace Reverse.Api
 {
     public class WebApiApplication : System.Web.HttpApplication
     {

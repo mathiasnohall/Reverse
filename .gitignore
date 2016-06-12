@@ -155,3 +155,8 @@ $RECYCLE.BIN/
 
 # Mac crap
 .DS_Store
+
+
+
+Reverse.Web/bower_components/
+Reverse.Web/node_modules/
