@@ -7,7 +7,6 @@ namespace Reverse.Api.Controllers.Status
 
         public IHttpActionResult GetStatus()
         {
-
             return Ok("ok");
         }
     }
