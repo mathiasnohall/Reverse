@@ -2,5 +2,5 @@
 
 
 reverseApp.constant('CONFIG', {
-    'apiUrl': 'localhost:52434'
+    'apiUrl': 'http://localhost:52434/'
 });

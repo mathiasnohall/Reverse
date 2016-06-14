@@ -108,6 +108,9 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Scripts\angular\Config\local.js" />
+    <Content Include="Scripts\angular\Controllers\statusController.js" />
+    <Content Include="Scripts\angular\Controllers\reverseController.js" />
+    <Content Include="Scripts\angular\Services\reverseService.js" />
     <Content Include="Static\Styles\global.scss" />
     <Content Include="Views\Shared\Layouts\_Root.cshtml" />
     <Content Include="Views\Web.config" />
@@ -129,9 +132,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\Pages\PageViewModel.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Scripts\angular\Controllers\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Views\StartPage\index.cshtml" />
   </ItemGroup>
