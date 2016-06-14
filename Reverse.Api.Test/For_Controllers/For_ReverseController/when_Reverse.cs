@@ -20,7 +20,7 @@ namespace Reverse.Api.Test.For_Controllers.For_ReverseController
         [Test]
         public void for_ReverseController_when_Reverse_it_should_return_ok()
         {
-            var result = _controller.PostReverse(_formData) as OkResult;
+            var result = _controller.PostReverse(_formData) as OkNegotiatedContentResult<string>;
 
             Assert.NotNull(result);
         }

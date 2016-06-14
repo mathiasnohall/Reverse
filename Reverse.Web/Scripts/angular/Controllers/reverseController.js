@@ -2,9 +2,10 @@
 
 reverseApp.controller('reverseController', ['$scope', 'reverseService', function ($scope, reverseService) {
     
-    $scope.submitForm = function (formData) {
-        reverseService.postForm(formData).then(function (data) {
+    $scope.submitForm = function () {
+        reverseService.postForm($scope.form).then(function (data) {
             $scope.response = data;
+            $scope.success = true;
         });
     }
 }]);

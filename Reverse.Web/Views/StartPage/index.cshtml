@@ -11,14 +11,14 @@
     
     <div ng-cloak ng-controller="reverseController">
         <form name="reverseForm"
-              ng-submit="formInput.$valid && submitForm(formInput)"
+              ng-submit="submitForm()"
               nonvalidate>
 
             <div class="form-group col-xs-12">
                 <label for="name-input">String to reverse</label>
                 <input class="form-control"
                        id="string-input"
-                       ng-model="formInput.string"
+                       ng-model="form.string"
                        placeholder="type string here"
                        required
                        type="text"
@@ -27,12 +27,15 @@
 
             <div class="form-group col-xs-12">
                 <button class="btn btn-primary"
-                    ng-disabled="formInput.$invalid"
+                    ng-disabled="form.$invalid"
                     type="submit">
                     Reverse
                 </button>
             </div>
         </form>
+        <div ng-show="success">
+            <p>{{response}}</p>
+        </div>
     </div>
 </div>
 
