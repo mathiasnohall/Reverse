@@ -1,4 +1,5 @@
-﻿using Reverse.Api.StructureMap;
+﻿using Reverse.Api.Services;
+using Reverse.Api.StructureMap;
 using StructureMap;
 using System.Web.Http;
 using System.Web.Http.Cors;
@@ -12,7 +13,8 @@ namespace Reverse.Api
         {
             // Web API configuration and services
             var container = new Container();
-            //container.Configure(c => c.For<ISearchResponseMapper>().Use<SearchResponseMapper
+            container.Configure(c => c.For<IStringReverseService>().Use<StringReverseService>());
+            container.Configure(c => c.For<IFormValidationService>().Use<FormValidationService>());
 
             config.Services.Replace(typeof(IHttpControllerActivator), new StructureMapControllerActivator(container));
 
