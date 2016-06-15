@@ -11,7 +11,7 @@ namespace Reverse.Api.Test.For_Services.For_FormValidationService
 
         public when_validData()
         {
-            _form = new { inpuString = "test test test" };
+            _form = new { inputString = "test test test" };
             _validationService = new FormValidationService();
         }
 

@@ -18,6 +18,7 @@ namespace Reverse.Api.Test.For_Controllers.For_ReverseController
         {
             _stringReverseService = A.Fake<IStringReverseService>();
             _formValidationService = A.Fake<IFormValidationService>();
+            A.CallTo(() => _formValidationService.GetInputString(A<object>.Ignored)).Returns("test");
             _controller = new ReverseController(_stringReverseService, _formValidationService);
 
             _formData = new { inputString = "test" };

@@ -11,7 +11,17 @@ namespace Reverse.Api.Services
     {
         public string GetInputString(dynamic form)
         {
-            throw new NotImplementedException();
+            var result = string.Empty;
+
+            if (form == null)
+                return result;
+
+            if(!string.IsNullOrEmpty((string)form.inputString))
+            {
+                result = form.inputString;
+            }
+
+            return result;
         }
     }
 }
