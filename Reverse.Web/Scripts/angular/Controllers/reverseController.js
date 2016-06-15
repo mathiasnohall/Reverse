@@ -6,6 +6,8 @@ reverseApp.controller('reverseController', ['$scope', 'reverseService', function
         reverseService.postForm($scope.form).then(function (data) {
             $scope.response = data;
             $scope.success = true;
+        }, function (reason) {
+            $scope.success = false;
         });
     }
 }]);

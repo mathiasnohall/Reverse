@@ -18,6 +18,9 @@ namespace Reverse.Api.Controllers.Reverse
         public IHttpActionResult PostReverse([FromBody] dynamic form)
         {
             var inputString = _formValidationService.GetInputString(form);
+            if (string.IsNullOrEmpty(inputString))
+                return BadRequest();
+
             var result = _stringReverseService.Reverse(inputString);
 
             return Ok(result);

@@ -1,12 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using NUnit.Framework;
+using Reverse.Api.Services;
 
 namespace Reverse.Api.Test.For_Services.For_StringReverseService
 {
-    class when_empty
+    [TestFixture]
+    public class when_empty
     {
+        private IStringReverseService _reverseService;
+
+        public when_empty()
+        {
+            _reverseService = new StringReverseService();
+        }
+
+        [Test]
+        public void for_StringReverseService_when_empty_it_should_return_empty_string()
+        {
+            var result = _reverseService.Reverse("");
+
+            Assert.AreEqual("", result);
+        }
     }
 }

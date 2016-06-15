@@ -79,6 +79,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="For_Controllers\For_ReverseController\when_Reverse_when_validation_fail.cs" />
     <Compile Include="For_Controllers\For_ReverseController\when_Reverse.cs" />
     <Compile Include="For_Controllers\For_StatusController\when_GetIndex.cs" />
     <Compile Include="For_Services\For_FormValidationService\when_invalidData.cs" />

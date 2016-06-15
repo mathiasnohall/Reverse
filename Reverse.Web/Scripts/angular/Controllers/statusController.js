@@ -6,6 +6,8 @@ reverseApp.controller('statusController', ['$scope', 'statusService', function (
 
         statusService.getStatus().then(function () {
             $scope.greeting = 'Hola reverse!';
+        }, function (reason) {
+            $scope.greeting = 'Sorry something bad happened :(';
         });
     };
 
